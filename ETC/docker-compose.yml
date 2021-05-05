@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    ethminer-etc-app:
+      runtime: nvidia
+      image: ahtonen/docker-ethminer
+      stdin_open: true
+      tty: true
+      container_name: ethminer-etc
+      command: /bin/bash /datos/ethminer.sh
+      volumes:
+      - ./:/datos

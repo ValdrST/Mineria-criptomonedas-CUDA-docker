@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    bminer-app:
+      runtime: nvidia
+      image: minuntu/nvidia-bminer
+      stdin_open: true
+      tty: true
+      container_name: bminer
+      entrypoint: ["/bin/bash","/datos/bminer.sh"]
+      ports:
+        - 3336:3336
+      volumes:
+      - ./:/datos
